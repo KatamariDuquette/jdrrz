@@ -1,0 +1,89 @@
+---
+title: "Hausaufgabe 2"
+author: "Anna Duurland + Jonas Derz"
+date: "2023-02-27"
+output: html_document
+---
+
+
+## Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE,
+                      attr.output='style="max-height: 400px;"')
+```
+
+### Leeres Environment:
+
+```{r clear}
+rm(list = ls())
+```
+
+### Working directory:
+
+```{r wd}
+getwd()               
+setwd("C:/Users/49172/OneDrive/Desktop/R Analysen/Hausaufgabe 2")
+```
+
+### Packages installieren und laden:
+
+```{r pacman}
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(tidyverse,                           
+               haven,
+               dplyr,
+               labelled,
+               sjmisc,
+               ggplot2) 
+```
+
+### Daten laden
+
+```{r Daten laden}
+df <- read_dta("hw02.dta")
+```
+
+### Die Interpretation und schriftliche Ausarbeitung der Aufgaben muss von jedem Studierenden selbstständig erarbeitet werden. Hierzu ist keine Zusammenarbeit in Gruppen zulässig.
+## Aufgabe 1
+### Die Variable panpriph misst, inwieweit Individuen öffentliche Gesundheit vor Wirtschaftsaktivität priorisieren. Erstelle eine neue Variable und kodiere sie so, dass höhere Werte eine höhere Priorisierung von öffentlicher Gesundheit bedeuten.
+
+```{r Rekodieren}
+head(df)
+?transmute
+```
+
+## Aufgabe 2
+### Erstelle neue Variablen für Alter (agea), Links-Rechts Selbsteinstufung (lrscale), Covid-19 Erkrankung (respc19), Geschlecht (gndr) und Bildung (eisced). Kodiere dabei die Variable für eine Covid-19 Erkrankung zu einer Dummy Variable um, die angibt, ob die betroffene Person bereits mit Covid-19 infiziert war oder nicht. Kodiere auch das Geschlecht als Dummy Variable und gib der Variable einen intuitiven Namen. Überprüfe ob alle fehlenden Werte in deinen Variablen als solche kodiert sind und hole dies andernfalls nach.
+
+```{r}
+
+```
+
+## Aufgabe 3
+### Berechne eine lineare Regression mit der Einstellung zur öffentlichen Gesundheit als abhängiger und Alter,Links-Rechts Selbsteinstufung, Covid-19 Erkrankung, Geschlecht und Bildung als unabhängigen Variablen.
+```{r}
+
+```
+
+##Aufgabe 4
+### Interpretiere die Regressionsergebnisse. Welche Faktoren haben einen signifikanten Einfluss auf die Einstellung zur öffentlichen Gesundheit? Wie groß ist der Einfluss der jeweiligen Variablen?
+```{r}
+
+```
+
+## Aufgabe 5
+### Wie gut kann das Modell die abhängige Variable erklären?
+```{r}
+
+```
+
+## Aufgabe 6
+### Welche Variable hat den stärksten Einfluss auf Vertrauen in das Europäische Parlament?
+```{r}
+
+```
+
